@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface NavigationProps {
   activeSection: string;
@@ -34,6 +35,12 @@ export function Navigation({ activeSection, onNavigate }: NavigationProps) {
           : "bg-transparent py-6"
       }`}
     >
+      <Link
+        to="/admin/rsvps"
+        className="text-[80px] opacity-10 hover:opacity-100 transition-opacity ml-2 absolute top-0"
+      >
+        .
+      </Link>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <button
